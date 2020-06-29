@@ -63,4 +63,25 @@ public class CustMatrixMultiplication implements MatrixMultiplication {
 
         return cell;
     }
+
+    
+    public static double[][] multiplyMatricesCustom(double[][] firstMatrix, double[][] secondMatrix) throws Exception {
+
+        if (firstMatrix[0].length != secondMatrix.length) {
+            throw new Exception("Number of columns of the first matrix must be equal"
+                    + " to the number of rows of the second matrix.");
+        }
+        double[][] result = new double[firstMatrix.length][secondMatrix[0].length];
+
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[i].length; j++) {
+                result[i][j] = 0;
+                for (int k = 0; k < secondMatrix.length; k++) {
+                    result[i][j] += firstMatrix[i][k] * secondMatrix[k][j];
+                }
+            }
+        }
+        return result;
+    }
+
 }

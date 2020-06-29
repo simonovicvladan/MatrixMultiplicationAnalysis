@@ -12,4 +12,6 @@ In addition, a Benchmarking is done, using JMH library. With different parameter
 3. BigMatrixMultiplicationBenchmarking class package rs.fon.master.ast2.matmull.benchmark works with big matrices (matrix size as command line parameter).
  -Results are presented in console output.
  
- Each class is documented and several most important methods are well documented. 
+ Each class and several most important methods are well documented.
+ 
+ Code is written applying template method pattern and coding to specification (interface) principle.
